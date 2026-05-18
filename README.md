@@ -19,8 +19,9 @@ Four self-contained notebooks walking through `pydantic-ai`'s feature surface:
 
    Windows (PowerShell):
 
+   Execution policy bypass is required, cf. [Installing uv](https://docs.astral.sh/uv/getting-started/installation/)
    ```powershell
-   irm https://astral.sh/uv/install.ps1 | iex
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
    ```
 
 2. **Clone and sync dependencies.** Open the repo in VS Code, then in the integrated terminal:
@@ -45,8 +46,15 @@ Four self-contained notebooks walking through `pydantic-ai`'s feature surface:
 
 ## Run
 
-1. Open `pydantic_ai_workshop/notebooks/01_intro.ipynb` in VS Code.
-2. Click **Select Kernel** in the top-right and pick the `.venv` Python (`uv` registered it during `uv sync`).
+### VS Code
+1. Open `pydantic_ai_workshop/notebooks/01_intro.ipynb` in VS Code. (Requires [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter))
+2. Click **Select Kernel** in the top-right and pick the `.venv` Python (`uv` registered it during `uv sync`).  If you do not see pydantic-ai-workshop kernel right away you might need to restart VS Code and run `uv sync` again.
+3. Run cells top-to-bottom.
+
+### Jupyter Lab
+If you prefer Jupyter Lab you can
+1. In terminal run jupyter server using `uv run --with jupyter jupyter lab` (cf. [Using uv with Jupyter](https://docs.astral.sh/uv/guides/integration/jupyter/)).
+2. Copy the URL with token and paste into your favorite browser.
 3. Run cells top-to-bottom.
 
 Each notebook is independent — start anywhere. Cells inside a notebook do build on each other, so run them in order.
