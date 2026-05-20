@@ -1,0 +1,2619 @@
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x1ffafbaea66d1a2e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0x9ea1c325522d1e47",
+    "start_time": "2026-05-19T22:35:33.222855Z",
+    "end_time": "2026-05-19T22:35:34.580401Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.anthropic.com/v1/messages?beta=true",
+        "logfire.span_type": "span",
+        "logfire.msg": "POST api.anthropic.com/v1/messages ? beta='true'",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e4261-4be0-749b-81f2-ac6e323a5b16",
+        "gen_ai.conversation.id": "019e4261-4be0-749b-81f2-ac6d33a06f23",
+        "http.request.header.host": [
+            "api.anthropic.com"
+        ],
+        "http.request.header.accept-encoding": [
+            "gzip, deflate"
+        ],
+        "http.request.header.connection": [
+            "keep-alive"
+        ],
+        "http.request.header.x-stainless-timeout": [
+            "600"
+        ],
+        "http.request.header.accept": [
+            "application/json"
+        ],
+        "http.request.header.content-type": [
+            "application/json"
+        ],
+        "http.request.header.user-agent": [
+            "pydantic-ai/1.94.0"
+        ],
+        "http.request.header.x-stainless-lang": [
+            "python"
+        ],
+        "http.request.header.x-stainless-package-version": [
+            "0.101.0"
+        ],
+        "http.request.header.x-stainless-os": [
+            "MacOS"
+        ],
+        "http.request.header.x-stainless-arch": [
+            "arm64"
+        ],
+        "http.request.header.x-stainless-runtime": [
+            "CPython"
+        ],
+        "http.request.header.x-stainless-runtime-version": [
+            "3.12.11"
+        ],
+        "http.request.header.x-api-key": [
+            "[Scrubbed due to 'api-key']"
+        ],
+        "http.request.header.x-stainless-async": [
+            "async:asyncio"
+        ],
+        "http.request.header.anthropic-version": [
+            "2023-06-01"
+        ],
+        "http.request.header.x-stainless-retry-count": [
+            "0"
+        ],
+        "http.request.header.x-stainless-read-timeout": [
+            "600"
+        ],
+        "http.request.header.content-length": [
+            "1444"
+        ],
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.request.body.text\":{\"type\":\"object\"}}}",
+        "http.request.body.text": "{\"max_tokens\":4096,\"messages\":[{\"role\":\"user\",\"content\":[{\"text\":\"What does the pro_plan cost?\",\"type\":\"text\"}]}],\"model\":\"claude-haiku-4-5-20251001\",\"stream\":false,\"system\":[{\"type\":\"text\",\"text\":\"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\"}],\"tool_choice\":{\"type\":\"any\"},\"tools\":[{\"name\":\"final_result\",\"description\":\"The final response which ends this conversation\",\"input_schema\":{\"properties\":{\"text\":{\"maxLength\":4000,\"minLength\":1,\"type\":\"string\"},\"citations\":{\"items\":{\"$ref\":\"#/$defs/Citation\"},\"type\":\"array\"},\"confidence\":{\"default\":0.8,\"maximum\":1.0,\"minimum\":0.0,\"type\":\"number\"},\"risk_flag\":{\"default\":\"none\",\"enum\":[\"none\",\"escalate\",\"urgent\"],\"type\":\"string\"}},\"required\":[\"text\"],\"type\":\"object\",\"$defs\":{\"Citation\":{\"properties\":{\"doc_id\":{\"maxLength\":100,\"minLength\":1,\"type\":\"string\"},\"quote\":{\"default\":\"n/a\",\"maxLength\":500,\"minLength\":1,\"type\":\"string\"}},\"required\":[\"doc_id\"],\"type\":\"object\"}}}}]}",
+        "http.status_code": 200,
+        "http.response.header.date": [
+            "Tue, 19 May 2026 22:35:34 GMT"
+        ],
+        "http.response.header.content-type": [
+            "application/json"
+        ],
+        "http.response.header.transfer-encoding": [
+            "chunked"
+        ],
+        "http.response.header.connection": [
+            "keep-alive"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-reset": [
+            "2026-05-19T22:35:34Z"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-reset": [
+            "2026-05-19T22:35:34Z"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-limit": [
+            "1000"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-remaining": [
+            "999"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-reset": [
+            "2026-05-19T22:35:33Z"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-limit": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-remaining": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-reset": [
+            "2026-05-19T22:35:34Z"
+        ],
+        "http.response.header.request-id": [
+            "req_011CbCj3weMDPynL7xm9Y6Ls"
+        ],
+        "http.response.header.strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+        ],
+        "http.response.header.anthropic-organization-id": [
+            "075b5bc4-de5b-4ca3-8669-199f41a4b995"
+        ],
+        "http.response.header.traceresponse": [
+            "00-f00c5f729fcae6ecd2d49dec3d03ed4c-069eb74282a5dc2c-01"
+        ],
+        "http.response.header.server": [
+            "cloudflare"
+        ],
+        "http.response.header.x-envoy-upstream-service-time": [
+            "1123"
+        ],
+        "http.response.header.content-encoding": [
+            "gzip"
+        ],
+        "http.response.header.vary": [
+            "Accept-Encoding"
+        ],
+        "http.response.header.cf-cache-status": [
+            "DYNAMIC"
+        ],
+        "http.response.header.set-cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.response.header.content-security-policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+        ],
+        "http.response.header.x-robots-tag": [
+            "none"
+        ],
+        "http.response.header.cf-ray": [
+            "9fe6934d1bd35a84-VIE"
+        ],
+        "http.target": "/v1/messages",
+        "logfire.scrubbed": "[{\"path\": [\"attributes\", \"http.request.header.x-api-key\"], \"matched_substring\": \"api-key\"}, {\"path\": [\"attributes\", \"http.response.header.set-cookie\"], \"matched_substring\": \"cookie\"}]"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "Reading response body",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x709070289c8bc6f6",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x1ffafbaea66d1a2e",
+    "start_time": "2026-05-19T22:35:34.600553Z",
+    "end_time": "2026-05-19T22:35:34.601523Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "logfire.msg_template": "Reading response body",
+        "logfire.msg": "Reading response body",
+        "logfire.span_type": "span",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e4261-4be0-749b-81f2-ac6e323a5b16",
+        "gen_ai.conversation.id": "019e4261-4be0-749b-81f2-ac6d33a06f23",
+        "http.response.body.text": "{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_017okih1kGkrcSSnD1xXZfNm\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_016MTCxtcXujxKoBsG4gCMEZ\",\"name\":\"final_result\",\"input\":{\"text\":\"The pro_plan costs $29.99 per month and includes up to 10 users.\",\"confidence\":0.95},\"caller\":{\"type\":\"direct\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":1008,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":76,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.response.body.text\":{\"type\":\"object\"}}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "chat claude-haiku-4-5-20251001",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x9ea1c325522d1e47",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0x56d995a57c47247f",
+    "start_time": "2026-05-19T22:35:33.219706Z",
+    "end_time": "2026-05-19T22:35:34.620665Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.provider.name": "anthropic",
+        "gen_ai.system": "anthropic",
+        "gen_ai.request.model": "claude-haiku-4-5-20251001",
+        "server.address": "api.anthropic.com",
+        "model_request_parameters": "{\"function_tools\": [], \"builtin_tools\": [], \"output_mode\": \"tool\", \"output_object\": null, \"output_tools\": [{\"name\": \"final_result\", \"parameters_json_schema\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}, \"description\": \"The final response which ends this conversation\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"output\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"prompted_output_template\": null, \"allow_text_output\": false, \"allow_image_output\": false, \"instruction_parts\": [{\"content\": \"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\", \"dynamic\": false, \"part_kind\": \"instruction\"}], \"thinking\": null}",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e4261-4be0-749b-81f2-ac6e323a5b16",
+        "gen_ai.conversation.id": "019e4261-4be0-749b-81f2-ac6d33a06f23",
+        "gen_ai.tool.definitions": "[{\"type\": \"function\", \"name\": \"final_result\", \"description\": \"The final response which ends this conversation\", \"parameters\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}}]",
+        "logfire.span_type": "span",
+        "logfire.msg": "chat claude-haiku-4-5-20251001",
+        "gen_ai.input.messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What does the pro_plan cost?\"}]}]",
+        "gen_ai.output.messages": "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_016MTCxtcXujxKoBsG4gCMEZ\", \"name\": \"final_result\", \"arguments\": {\"text\": \"The pro_plan costs $29.99 per month and includes up to 10 users.\", \"confidence\": 0.95}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"gen_ai.input.messages\": {\"type\": \"array\"}, \"gen_ai.output.messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"model_request_parameters\": {\"type\": \"object\"}}}",
+        "gen_ai.usage.input_tokens": 1008,
+        "gen_ai.usage.output_tokens": 76,
+        "gen_ai.usage.details.input_tokens": 1008,
+        "gen_ai.usage.details.output_tokens": 76,
+        "gen_ai.response.model": "claude-haiku-4-5-20251001",
+        "operation.cost": 0.001388,
+        "gen_ai.response.id": "msg_017okih1kGkrcSSnD1xXZfNm",
+        "gen_ai.response.finish_reasons": [
+            "tool_call"
+        ]
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "agent run",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x56d995a57c47247f",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xc5dd45bacf791b01",
+    "start_time": "2026-05-19T22:35:33.217084Z",
+    "end_time": "2026-05-19T22:35:34.621570Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "model_name": "claude-haiku-4-5-20251001",
+        "agent_name": "eval-agent",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e4261-4be0-749b-81f2-ac6e323a5b16",
+        "gen_ai.conversation.id": "019e4261-4be0-749b-81f2-ac6d33a06f23",
+        "gen_ai.operation.name": "invoke_agent",
+        "logfire.msg": "eval-agent run",
+        "logfire.span_type": "span",
+        "final_result": "{\"text\": \"The pro_plan costs $29.99 per month and includes up to 10 users.\", \"citations\": [], \"confidence\": 0.95, \"risk_flag\": \"none\"}",
+        "gen_ai.usage.input_tokens": 1008,
+        "gen_ai.usage.output_tokens": 76,
+        "gen_ai.usage.details.input_tokens": 1008,
+        "gen_ai.usage.details.output_tokens": 76,
+        "pydantic_ai.all_messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What does the pro_plan cost?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_016MTCxtcXujxKoBsG4gCMEZ\", \"name\": \"final_result\", \"arguments\": {\"text\": \"The pro_plan costs $29.99 per month and includes up to 10 users.\", \"confidence\": 0.95}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_016MTCxtcXujxKoBsG4gCMEZ\", \"name\": \"final_result\", \"result\": \"Final result processed.\"}]}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"pydantic_ai.all_messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"final_result\": {\"type\": \"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1008}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 76}], \"total\": 1084}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001388}], \"total\": 0.001388}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "execute {task}",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0xc5dd45bacf791b01",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7930738cff737c8e",
+    "start_time": "2026-05-19T22:35:33.214724Z",
+    "end_time": "2026-05-19T22:35:34.621920Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "task": "task",
+        "logfire.msg_template": "execute {task}",
+        "logfire.msg": "execute task",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"task\":{}}}",
+        "logfire.span_type": "span",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1008}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 76}], \"total\": 1084}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001388}], \"total\": 0.001388}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluator: {evaluator_name}",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x74e9d7be4b855f4d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7930738cff737c8e",
+    "start_time": "2026-05-19T22:35:34.694940Z",
+    "end_time": "2026-05-19T22:35:34.695232Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "evaluator_name": "keyword_overlap",
+        "logfire.msg_template": "Calling evaluator: {evaluator_name}",
+        "logfire.msg": "Calling evaluator: keyword_overlap",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"evaluator_name\":{}}}",
+        "logfire.span_type": "span"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluator: {evaluator_name}",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0xfd68a3bbad68bfbf",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7930738cff737c8e",
+    "start_time": "2026-05-19T22:35:34.695382Z",
+    "end_time": "2026-05-19T22:35:34.695423Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "evaluator_name": "risk_flag",
+        "logfire.msg_template": "Calling evaluator: {evaluator_name}",
+        "logfire.msg": "Calling evaluator: risk_flag",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"evaluator_name\":{}}}",
+        "logfire.span_type": "span"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x8797ed366b842ffd",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0x75cf25ff0944a127",
+    "start_time": "2026-05-19T22:35:34.698305Z",
+    "end_time": "2026-05-19T22:35:36.222005Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.anthropic.com/v1/messages?beta=true",
+        "logfire.span_type": "span",
+        "logfire.msg": "POST api.anthropic.com/v1/messages ? beta='true'",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e4261-51a8-73fc-97b9-e9da801113d3",
+        "gen_ai.conversation.id": "019e4261-51a8-73fc-97b9-e9d935ae0590",
+        "http.request.header.host": [
+            "api.anthropic.com"
+        ],
+        "http.request.header.accept-encoding": [
+            "gzip, deflate"
+        ],
+        "http.request.header.connection": [
+            "keep-alive"
+        ],
+        "http.request.header.x-stainless-timeout": [
+            "600"
+        ],
+        "http.request.header.accept": [
+            "application/json"
+        ],
+        "http.request.header.content-type": [
+            "application/json"
+        ],
+        "http.request.header.user-agent": [
+            "pydantic-ai/1.94.0"
+        ],
+        "http.request.header.x-stainless-lang": [
+            "python"
+        ],
+        "http.request.header.x-stainless-package-version": [
+            "0.101.0"
+        ],
+        "http.request.header.x-stainless-os": [
+            "MacOS"
+        ],
+        "http.request.header.x-stainless-arch": [
+            "arm64"
+        ],
+        "http.request.header.x-stainless-runtime": [
+            "CPython"
+        ],
+        "http.request.header.x-stainless-runtime-version": [
+            "3.12.11"
+        ],
+        "http.request.header.x-api-key": [
+            "[Scrubbed due to 'api-key']"
+        ],
+        "http.request.header.x-stainless-async": [
+            "async:asyncio"
+        ],
+        "http.request.header.anthropic-version": [
+            "2023-06-01"
+        ],
+        "http.request.header.x-stainless-retry-count": [
+            "0"
+        ],
+        "http.request.header.x-stainless-read-timeout": [
+            "600"
+        ],
+        "http.request.header.cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.request.header.content-length": [
+            "1104"
+        ],
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.request.body.text\":{\"type\":\"object\"}}}",
+        "http.request.body.text": "{\"max_tokens\":4096,\"messages\":[{\"role\":\"user\",\"content\":[{\"text\":\"Question:\\nWhat does the pro_plan cost?\\n\\nReference answer:\\nThe pro_plan is $29.99/month, supporting up to 10 users.\\n\\nCandidate answer:\\nThe pro_plan costs $29.99 per month and includes up to 10 users.\\n\\nScore the candidate's match to the reference.\",\"type\":\"text\"}]}],\"model\":\"claude-haiku-4-5-20251001\",\"stream\":false,\"system\":[{\"type\":\"text\",\"text\":\"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\"}],\"tool_choice\":{\"type\":\"any\"},\"tools\":[{\"name\":\"final_result\",\"description\":\"Schema the judge agent must return \u2014 keeps the score structurally validated.\",\"input_schema\":{\"properties\":{\"score\":{\"maximum\":1.0,\"minimum\":0.0,\"type\":\"number\"},\"reasoning\":{\"maxLength\":500,\"minLength\":1,\"type\":\"string\"}},\"required\":[\"score\",\"reasoning\"],\"type\":\"object\"}}]}",
+        "http.status_code": 200,
+        "http.response.header.date": [
+            "Tue, 19 May 2026 22:35:36 GMT"
+        ],
+        "http.response.header.content-type": [
+            "application/json"
+        ],
+        "http.response.header.transfer-encoding": [
+            "chunked"
+        ],
+        "http.response.header.connection": [
+            "keep-alive"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-reset": [
+            "2026-05-19T22:35:35Z"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-reset": [
+            "2026-05-19T22:35:36Z"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-limit": [
+            "1000"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-remaining": [
+            "999"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-reset": [
+            "2026-05-19T22:35:34Z"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-limit": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-remaining": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-reset": [
+            "2026-05-19T22:35:35Z"
+        ],
+        "http.response.header.request-id": [
+            "req_011CbCj43mhEGFNuUNNnCgmK"
+        ],
+        "http.response.header.strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+        ],
+        "http.response.header.anthropic-organization-id": [
+            "075b5bc4-de5b-4ca3-8669-199f41a4b995"
+        ],
+        "http.response.header.traceresponse": [
+            "00-3d9d222aa03e819d76f088f49aca1b7b-43d9df4db9e0e71c-01"
+        ],
+        "http.response.header.server": [
+            "cloudflare"
+        ],
+        "http.response.header.x-envoy-upstream-service-time": [
+            "1318"
+        ],
+        "http.response.header.content-encoding": [
+            "gzip"
+        ],
+        "http.response.header.vary": [
+            "Accept-Encoding"
+        ],
+        "http.response.header.cf-cache-status": [
+            "DYNAMIC"
+        ],
+        "http.response.header.x-robots-tag": [
+            "none"
+        ],
+        "http.response.header.content-security-policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+        ],
+        "http.response.header.cf-ray": [
+            "9fe6935608f95a84-VIE"
+        ],
+        "http.target": "/v1/messages",
+        "logfire.scrubbed": "[{\"path\": [\"attributes\", \"http.request.header.x-api-key\"], \"matched_substring\": \"api-key\"}, {\"path\": [\"attributes\", \"http.request.header.cookie\"], \"matched_substring\": \"cookie\"}]"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "Reading response body",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0xa2163731fa1e20a5",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x8797ed366b842ffd",
+    "start_time": "2026-05-19T22:35:36.225340Z",
+    "end_time": "2026-05-19T22:35:36.226496Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "logfire.msg_template": "Reading response body",
+        "logfire.msg": "Reading response body",
+        "logfire.span_type": "span",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e4261-51a8-73fc-97b9-e9da801113d3",
+        "gen_ai.conversation.id": "019e4261-51a8-73fc-97b9-e9d935ae0590",
+        "http.response.body.text": "{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_01JejF26fViERNa8a4kpvEZ3\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_019duoK6Q3JSfsWoXSFuECty\",\"name\":\"final_result\",\"input\":{\"score\":1.0,\"reasoning\":\"The candidate answer accurately captures all the key facts from the reference answer: the cost ($29.99/month) and the user limit (up to 10 users). The wording is slightly different (\\\"costs $29.99 per month and includes\\\" vs \\\"$29.99/month, supporting\\\") but conveys identical information with no hallucinations or errors.\"},\"caller\":{\"type\":\"direct\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":868,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":131,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.response.body.text\":{\"type\":\"object\"}}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "chat claude-haiku-4-5-20251001",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x75cf25ff0944a127",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xbe2ad3df334018a2",
+    "start_time": "2026-05-19T22:35:34.697396Z",
+    "end_time": "2026-05-19T22:35:36.228127Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.provider.name": "anthropic",
+        "gen_ai.system": "anthropic",
+        "gen_ai.request.model": "claude-haiku-4-5-20251001",
+        "server.address": "api.anthropic.com",
+        "model_request_parameters": "{\"function_tools\": [], \"builtin_tools\": [], \"output_mode\": \"tool\", \"output_object\": null, \"output_tools\": [{\"name\": \"final_result\", \"parameters_json_schema\": {\"properties\": {\"score\": {\"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"reasoning\": {\"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"score\", \"reasoning\"], \"type\": \"object\"}, \"description\": \"Schema the judge agent must return \\u2014 keeps the score structurally validated.\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"output\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"prompted_output_template\": null, \"allow_text_output\": false, \"allow_image_output\": false, \"instruction_parts\": [{\"content\": \"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\", \"dynamic\": false, \"part_kind\": \"instruction\"}], \"thinking\": null}",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e4261-51a8-73fc-97b9-e9da801113d3",
+        "gen_ai.conversation.id": "019e4261-51a8-73fc-97b9-e9d935ae0590",
+        "gen_ai.tool.definitions": "[{\"type\": \"function\", \"name\": \"final_result\", \"description\": \"Schema the judge agent must return \\u2014 keeps the score structurally validated.\", \"parameters\": {\"properties\": {\"score\": {\"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"reasoning\": {\"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"score\", \"reasoning\"], \"type\": \"object\"}}]",
+        "logfire.span_type": "span",
+        "logfire.msg": "chat claude-haiku-4-5-20251001",
+        "gen_ai.input.messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Question:\\nWhat does the pro_plan cost?\\n\\nReference answer:\\nThe pro_plan is $29.99/month, supporting up to 10 users.\\n\\nCandidate answer:\\nThe pro_plan costs $29.99 per month and includes up to 10 users.\\n\\nScore the candidate's match to the reference.\"}]}]",
+        "gen_ai.output.messages": "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_019duoK6Q3JSfsWoXSFuECty\", \"name\": \"final_result\", \"arguments\": {\"score\": 1.0, \"reasoning\": \"The candidate answer accurately captures all the key facts from the reference answer: the cost ($29.99/month) and the user limit (up to 10 users). The wording is slightly different (\\\"costs $29.99 per month and includes\\\" vs \\\"$29.99/month, supporting\\\") but conveys identical information with no hallucinations or errors.\"}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"gen_ai.input.messages\": {\"type\": \"array\"}, \"gen_ai.output.messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"model_request_parameters\": {\"type\": \"object\"}}}",
+        "gen_ai.usage.input_tokens": 868,
+        "gen_ai.usage.output_tokens": 131,
+        "gen_ai.usage.details.input_tokens": 868,
+        "gen_ai.usage.details.output_tokens": 131,
+        "gen_ai.response.model": "claude-haiku-4-5-20251001",
+        "operation.cost": 0.001523,
+        "gen_ai.response.id": "msg_01JejF26fViERNa8a4kpvEZ3",
+        "gen_ai.response.finish_reasons": [
+            "tool_call"
+        ]
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "agent run",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0xbe2ad3df334018a2",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xa7190e393193e9b7",
+    "start_time": "2026-05-19T22:35:34.696516Z",
+    "end_time": "2026-05-19T22:35:36.230410Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "model_name": "claude-haiku-4-5-20251001",
+        "agent_name": "_JUDGE_AGENT",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e4261-51a8-73fc-97b9-e9da801113d3",
+        "gen_ai.conversation.id": "019e4261-51a8-73fc-97b9-e9d935ae0590",
+        "gen_ai.operation.name": "invoke_agent",
+        "logfire.msg": "_JUDGE_AGENT run",
+        "logfire.span_type": "span",
+        "final_result": "{\"score\": 1.0, \"reasoning\": \"The candidate answer accurately captures all the key facts from the reference answer: the cost ($29.99/month) and the user limit (up to 10 users). The wording is slightly different (\\\"costs $29.99 per month and includes\\\" vs \\\"$29.99/month, supporting\\\") but conveys identical information with no hallucinations or errors.\"}",
+        "gen_ai.usage.input_tokens": 868,
+        "gen_ai.usage.output_tokens": 131,
+        "gen_ai.usage.details.input_tokens": 868,
+        "gen_ai.usage.details.output_tokens": 131,
+        "pydantic_ai.all_messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Question:\\nWhat does the pro_plan cost?\\n\\nReference answer:\\nThe pro_plan is $29.99/month, supporting up to 10 users.\\n\\nCandidate answer:\\nThe pro_plan costs $29.99 per month and includes up to 10 users.\\n\\nScore the candidate's match to the reference.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_019duoK6Q3JSfsWoXSFuECty\", \"name\": \"final_result\", \"arguments\": {\"score\": 1.0, \"reasoning\": \"The candidate answer accurately captures all the key facts from the reference answer: the cost ($29.99/month) and the user limit (up to 10 users). The wording is slightly different (\\\"costs $29.99 per month and includes\\\" vs \\\"$29.99/month, supporting\\\") but conveys identical information with no hallucinations or errors.\"}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_019duoK6Q3JSfsWoXSFuECty\", \"name\": \"final_result\", \"result\": \"Final result processed.\"}]}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"pydantic_ai.all_messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"final_result\": {\"type\": \"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 868}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 131}], \"total\": 999}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001523}], \"total\": 0.001523}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluator: {evaluator_name}",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0xa7190e393193e9b7",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7930738cff737c8e",
+    "start_time": "2026-05-19T22:35:34.695482Z",
+    "end_time": "2026-05-19T22:35:36.231096Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "evaluator_name": "llm_judge",
+        "logfire.msg_template": "Calling evaluator: {evaluator_name}",
+        "logfire.msg": "Calling evaluator: llm_judge",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"evaluator_name\":{}}}",
+        "logfire.span_type": "span",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 868}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 131}], \"total\": 999}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001523}], \"total\": 0.001523}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "case: {case_name}",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x7930738cff737c8e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7ae711883995d158",
+    "start_time": "2026-05-19T22:35:33.213752Z",
+    "end_time": "2026-05-19T22:35:36.232085Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "task_name": "task",
+        "case_name": "qa-01-price",
+        "inputs": "What does the pro_plan cost?",
+        "metadata": "{\"expected_keywords\":[\"29.99\",\"pro_plan\"],\"must_escalate\":false,\"expected_answer\":\"The pro_plan is $29.99/month, supporting up to 10 users.\"}",
+        "expected_output": "null",
+        "logfire.msg_template": "case: {case_name}",
+        "logfire.msg": "case: qa-01-price",
+        "logfire.span_type": "span",
+        "output": "{\"text\":\"The pro_plan costs $29.99 per month and includes up to 10 users.\",\"citations\":[],\"confidence\":0.95,\"risk_flag\":\"none\"}",
+        "task_duration": 1.407196,
+        "metrics": "{\"requests\":1,\"input_tokens\":2016,\"output_tokens\":152,\"cost\":0.001388}",
+        "attributes": "{}",
+        "assertions": "{}",
+        "scores": "{\"keyword_overlap\":{\"name\":\"keyword_overlap\",\"value\":1.0,\"reason\":null,\"source\":{\"name\":\"KeywordOverlapEvaluator\",\"arguments\":null},\"evaluator_version\":null},\"risk_flag\":{\"name\":\"risk_flag\",\"value\":1.0,\"reason\":null,\"source\":{\"name\":\"RiskFlagEvaluator\",\"arguments\":null},\"evaluator_version\":null},\"llm_judge\":{\"name\":\"llm_judge\",\"value\":1.0,\"reason\":null,\"source\":{\"name\":\"LLMJudgeEvaluator\",\"arguments\":null},\"evaluator_version\":null}}",
+        "labels": "{}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"task_name\":{},\"case_name\":{},\"inputs\":{},\"metadata\":{\"type\":\"object\"},\"expected_output\":{\"type\":\"null\"},\"output\":{\"type\":\"object\",\"title\":\"Answer\",\"x-python-datatype\":\"PydanticModel\"},\"task_duration\":{},\"metrics\":{\"type\":\"object\"},\"attributes\":{\"type\":\"object\"},\"assertions\":{\"type\":\"object\"},\"scores\":{\"type\":\"object\"},\"labels\":{\"type\":\"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1876}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 207}], \"total\": 2083}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.002911}], \"total\": 0.002911}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluate {name}",
+    "context": {
+        "trace_id": "0x019e42614bd983d091d0c3c31707211b",
+        "span_id": "0x7ae711883995d158",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-05-19T22:35:33.209289Z",
+    "end_time": "2026-05-19T22:35:36.234480Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "code.filepath": "/var/folders/2h/0rn53sk962v5pdjbjs_4mplm0000gn/T/ipykernel_19369/2836299414.py",
+        "code.lineno": 24,
+        "name": "task",
+        "task_name": "task",
+        "dataset_name": "04_production-evals",
+        "n_cases": 1,
+        "gen_ai.operation.name": "experiment",
+        "logfire.msg_template": "evaluate {name}",
+        "logfire.msg": "evaluate task",
+        "logfire.span_type": "span",
+        "logfire.experiment.metadata": "{\"n_cases\":1,\"averages\":{\"name\":\"Averages\",\"scores\":{\"keyword_overlap\":1.0,\"risk_flag\":1.0,\"llm_judge\":1.0},\"labels\":{},\"metrics\":{\"requests\":1.0,\"input_tokens\":2016.0,\"output_tokens\":152.0,\"cost\":0.001388},\"assertions\":null,\"task_duration\":1.407196,\"total_duration\":3.018333}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"name\":{},\"task_name\":{},\"dataset_name\":{},\"n_cases\":{},\"gen_ai.operation.name\":{},\"logfire.experiment.metadata\":{\"type\":\"object\",\"properties\":{\"averages\":{\"type\":\"object\",\"title\":\"ReportCaseAggregate\",\"x-python-datatype\":\"PydanticModel\"}}}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1876}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 207}], \"total\": 2083}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.002911}], \"total\": 0.002911}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0x019e426222585398f74e54422f90521a",
+        "span_id": "0x3897c2b11defd85d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xeabfabbe836a14b9",
+    "start_time": "2026-05-19T22:36:28.123276Z",
+    "end_time": "2026-05-19T22:36:29.184467Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.anthropic.com/v1/messages?beta=true",
+        "logfire.span_type": "span",
+        "logfire.msg": "POST api.anthropic.com/v1/messages ? beta='true'",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2257-72a0-895a-8ee468e9185c",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "http.request.header.host": [
+            "api.anthropic.com"
+        ],
+        "http.request.header.accept-encoding": [
+            "gzip, deflate"
+        ],
+        "http.request.header.connection": [
+            "keep-alive"
+        ],
+        "http.request.header.x-stainless-timeout": [
+            "600"
+        ],
+        "http.request.header.accept": [
+            "application/json"
+        ],
+        "http.request.header.content-type": [
+            "application/json"
+        ],
+        "http.request.header.user-agent": [
+            "pydantic-ai/1.94.0"
+        ],
+        "http.request.header.x-stainless-lang": [
+            "python"
+        ],
+        "http.request.header.x-stainless-package-version": [
+            "0.101.0"
+        ],
+        "http.request.header.x-stainless-os": [
+            "MacOS"
+        ],
+        "http.request.header.x-stainless-arch": [
+            "arm64"
+        ],
+        "http.request.header.x-stainless-runtime": [
+            "CPython"
+        ],
+        "http.request.header.x-stainless-runtime-version": [
+            "3.12.11"
+        ],
+        "http.request.header.x-api-key": [
+            "[Scrubbed due to 'api-key']"
+        ],
+        "http.request.header.x-stainless-async": [
+            "async:asyncio"
+        ],
+        "http.request.header.anthropic-version": [
+            "2023-06-01"
+        ],
+        "http.request.header.x-stainless-retry-count": [
+            "0"
+        ],
+        "http.request.header.x-stainless-read-timeout": [
+            "600"
+        ],
+        "http.request.header.cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.request.header.content-length": [
+            "1467"
+        ],
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.request.body.text\":{\"type\":\"object\"}}}",
+        "http.request.body.text": "{\"max_tokens\":4096,\"messages\":[{\"role\":\"user\",\"content\":[{\"text\":\"Please refund order ORDER-1234 for $29.99 \u2014 the customer was charged twice for their pro_plan subscription.\",\"type\":\"text\"}]}],\"model\":\"claude-haiku-4-5-20251001\",\"stream\":false,\"system\":[{\"type\":\"text\",\"text\":\"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\"}],\"tool_choice\":{\"type\":\"any\"},\"tools\":[{\"name\":\"refund_order\",\"description\":\"Issue a refund for an order. Requires human approval.\",\"input_schema\":{\"additionalProperties\":false,\"properties\":{\"order_id\":{\"type\":\"string\"},\"amount_usd\":{\"type\":\"number\"},\"reason\":{\"type\":\"string\"}},\"required\":[\"order_id\",\"amount_usd\",\"reason\"],\"type\":\"object\"}},{\"name\":\"final_result\",\"description\":\"The final response which ends this conversation\",\"input_schema\":{\"properties\":{\"text\":{\"maxLength\":4000,\"minLength\":1,\"type\":\"string\"},\"citations\":{\"items\":{\"$ref\":\"#/$defs/Citation\"},\"type\":\"array\"},\"confidence\":{\"default\":0.8,\"maximum\":1.0,\"minimum\":0.0,\"type\":\"number\"},\"risk_flag\":{\"default\":\"none\",\"enum\":[\"none\",\"escalate\",\"urgent\"],\"type\":\"string\"}},\"required\":[\"text\"],\"type\":\"object\",\"$defs\":{\"Citation\":{\"properties\":{\"doc_id\":{\"maxLength\":100,\"minLength\":1,\"type\":\"string\"},\"quote\":{\"default\":\"n/a\",\"maxLength\":500,\"minLength\":1,\"type\":\"string\"}},\"required\":[\"doc_id\"],\"type\":\"object\"}}}}]}",
+        "http.status_code": 200,
+        "http.response.header.date": [
+            "Tue, 19 May 2026 22:36:29 GMT"
+        ],
+        "http.response.header.content-type": [
+            "application/json"
+        ],
+        "http.response.header.transfer-encoding": [
+            "chunked"
+        ],
+        "http.response.header.connection": [
+            "keep-alive"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-reset": [
+            "2026-05-19T22:36:28Z"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-reset": [
+            "2026-05-19T22:36:29Z"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-limit": [
+            "1000"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-remaining": [
+            "999"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-reset": [
+            "2026-05-19T22:36:28Z"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-limit": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-remaining": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-reset": [
+            "2026-05-19T22:36:28Z"
+        ],
+        "http.response.header.request-id": [
+            "req_011CbCj7zPARf57guVq1j43V"
+        ],
+        "http.response.header.strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+        ],
+        "http.response.header.anthropic-organization-id": [
+            "075b5bc4-de5b-4ca3-8669-199f41a4b995"
+        ],
+        "http.response.header.traceresponse": [
+            "00-7c237552620abe4af88b1093f75e0092-661c775f8d847c93-01"
+        ],
+        "http.response.header.server": [
+            "cloudflare"
+        ],
+        "http.response.header.x-envoy-upstream-service-time": [
+            "822"
+        ],
+        "http.response.header.content-encoding": [
+            "gzip"
+        ],
+        "http.response.header.vary": [
+            "Accept-Encoding"
+        ],
+        "http.response.header.x-robots-tag": [
+            "none"
+        ],
+        "http.response.header.content-security-policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+        ],
+        "http.response.header.cf-cache-status": [
+            "DYNAMIC"
+        ],
+        "http.response.header.cf-ray": [
+            "9fe694a44cb834c2-VIE"
+        ],
+        "http.target": "/v1/messages",
+        "logfire.scrubbed": "[{\"path\": [\"attributes\", \"http.request.header.x-api-key\"], \"matched_substring\": \"api-key\"}, {\"path\": [\"attributes\", \"http.request.header.cookie\"], \"matched_substring\": \"cookie\"}]"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "Reading response body",
+    "context": {
+        "trace_id": "0x019e426222585398f74e54422f90521a",
+        "span_id": "0xb93c13b1d71ef2c8",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x3897c2b11defd85d",
+    "start_time": "2026-05-19T22:36:29.185341Z",
+    "end_time": "2026-05-19T22:36:29.185662Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "logfire.msg_template": "Reading response body",
+        "logfire.msg": "Reading response body",
+        "logfire.span_type": "span",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2257-72a0-895a-8ee468e9185c",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "http.response.body.text": "{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_019LzzoLCcpdvWT2HKQE9qW7\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_01NMq6tu5avTV6acWnpAwL5J\",\"name\":\"refund_order\",\"input\":{\"order_id\":\"ORDER-1234\",\"amount_usd\":29.99,\"reason\":\"customer was charged twice for their pro_plan subscription\"},\"caller\":{\"type\":\"direct\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":1017,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":92,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.response.body.text\":{\"type\":\"object\"}}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "chat claude-haiku-4-5-20251001",
+    "context": {
+        "trace_id": "0x019e426222585398f74e54422f90521a",
+        "span_id": "0xeabfabbe836a14b9",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xa4262b67252a670f",
+    "start_time": "2026-05-19T22:36:28.121780Z",
+    "end_time": "2026-05-19T22:36:29.186133Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.provider.name": "anthropic",
+        "gen_ai.system": "anthropic",
+        "gen_ai.request.model": "claude-haiku-4-5-20251001",
+        "server.address": "api.anthropic.com",
+        "model_request_parameters": "{\"function_tools\": [{\"name\": \"refund_order\", \"parameters_json_schema\": {\"additionalProperties\": false, \"properties\": {\"order_id\": {\"type\": \"string\"}, \"amount_usd\": {\"type\": \"number\"}, \"reason\": {\"type\": \"string\"}}, \"required\": [\"order_id\", \"amount_usd\", \"reason\"], \"type\": \"object\"}, \"description\": \"Issue a refund for an order. Requires human approval.\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"unapproved\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"builtin_tools\": [], \"output_mode\": \"tool\", \"output_object\": null, \"output_tools\": [{\"name\": \"final_result\", \"parameters_json_schema\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}, \"description\": \"The final response which ends this conversation\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"output\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"prompted_output_template\": null, \"allow_text_output\": false, \"allow_image_output\": false, \"instruction_parts\": [{\"content\": \"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\", \"dynamic\": false, \"part_kind\": \"instruction\"}], \"thinking\": null}",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2257-72a0-895a-8ee468e9185c",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "gen_ai.tool.definitions": "[{\"type\": \"function\", \"name\": \"refund_order\", \"description\": \"Issue a refund for an order. Requires human approval.\", \"parameters\": {\"additionalProperties\": false, \"properties\": {\"order_id\": {\"type\": \"string\"}, \"amount_usd\": {\"type\": \"number\"}, \"reason\": {\"type\": \"string\"}}, \"required\": [\"order_id\", \"amount_usd\", \"reason\"], \"type\": \"object\"}}, {\"type\": \"function\", \"name\": \"final_result\", \"description\": \"The final response which ends this conversation\", \"parameters\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}}]",
+        "logfire.span_type": "span",
+        "logfire.msg": "chat claude-haiku-4-5-20251001",
+        "gen_ai.input.messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Please refund order ORDER-1234 for $29.99 \\u2014 the customer was charged twice for their pro_plan subscription.\"}]}]",
+        "gen_ai.output.messages": "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"name\": \"refund_order\", \"arguments\": {\"order_id\": \"ORDER-1234\", \"amount_usd\": 29.99, \"reason\": \"customer was charged twice for their pro_plan subscription\"}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"gen_ai.input.messages\": {\"type\": \"array\"}, \"gen_ai.output.messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"model_request_parameters\": {\"type\": \"object\"}}}",
+        "gen_ai.usage.input_tokens": 1017,
+        "gen_ai.usage.output_tokens": 92,
+        "gen_ai.usage.details.input_tokens": 1017,
+        "gen_ai.usage.details.output_tokens": 92,
+        "gen_ai.response.model": "claude-haiku-4-5-20251001",
+        "operation.cost": 0.001477,
+        "gen_ai.response.id": "msg_019LzzoLCcpdvWT2HKQE9qW7",
+        "gen_ai.response.finish_reasons": [
+            "tool_call"
+        ]
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "agent run",
+    "context": {
+        "trace_id": "0x019e426222585398f74e54422f90521a",
+        "span_id": "0xa4262b67252a670f",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-05-19T22:36:28.120259Z",
+    "end_time": "2026-05-19T22:36:29.186749Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "model_name": "claude-haiku-4-5-20251001",
+        "agent_name": "approval_agent",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2257-72a0-895a-8ee468e9185c",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "gen_ai.operation.name": "invoke_agent",
+        "logfire.msg": "approval_agent run",
+        "logfire.span_type": "span",
+        "final_result": "{\"calls\": [], \"approvals\": [{\"tool_name\": \"refund_order\", \"args\": {\"order_id\": \"ORDER-1234\", \"amount_usd\": 29.99, \"reason\": \"customer was charged twice for their pro_plan subscription\"}, \"tool_call_id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"id\": null, \"provider_name\": null, \"provider_details\": null, \"part_kind\": \"tool-call\"}], \"metadata\": {}}",
+        "gen_ai.usage.input_tokens": 1017,
+        "gen_ai.usage.output_tokens": 92,
+        "gen_ai.usage.details.input_tokens": 1017,
+        "gen_ai.usage.details.output_tokens": 92,
+        "pydantic_ai.all_messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Please refund order ORDER-1234 for $29.99 \\u2014 the customer was charged twice for their pro_plan subscription.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"name\": \"refund_order\", \"arguments\": {\"order_id\": \"ORDER-1234\", \"amount_usd\": 29.99, \"reason\": \"customer was charged twice for their pro_plan subscription\"}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"pydantic_ai.all_messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"final_result\": {\"type\": \"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1017}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 92}], \"total\": 1109}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001477}], \"total\": 0.001477}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "running tool",
+    "context": {
+        "trace_id": "0x019e426226863624195a93435255b0a6",
+        "span_id": "0x844b05c765e4ae97",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xa977830478a1ff0e",
+    "start_time": "2026-05-19T22:36:29.191475Z",
+    "end_time": "2026-05-19T22:36:29.192734Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "execute_tool",
+        "gen_ai.tool.name": "refund_order",
+        "gen_ai.tool.call.id": "toolu_01NMq6tu5avTV6acWnpAwL5J",
+        "tool_arguments": "{\"order_id\":\"ORDER-1234\",\"amount_usd\":29.99,\"reason\":\"customer was charged twice for their pro_plan subscription\"}",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2685-7220-9b21-4d178944c525",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "logfire.msg": "running tool: refund_order",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"tool_arguments\": {\"type\": \"object\"}, \"tool_response\": {\"type\": \"object\"}, \"gen_ai.tool.name\": {}, \"gen_ai.tool.call.id\": {}}}",
+        "logfire.span_type": "span",
+        "tool_response": "Refunded 29.99 USD for order ORDER-1234 (reason: customer was charged twice for their pro_plan subscription). Reference: REFUND-DEMO-0001."
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0x019e426226863624195a93435255b0a6",
+        "span_id": "0x8674e0abcf546655",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0x6ee55758c0e6241d",
+    "start_time": "2026-05-19T22:36:29.194839Z",
+    "end_time": "2026-05-19T22:36:30.424417Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.anthropic.com/v1/messages?beta=true",
+        "logfire.span_type": "span",
+        "logfire.msg": "POST api.anthropic.com/v1/messages ? beta='true'",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2685-7220-9b21-4d178944c525",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "http.request.header.host": [
+            "api.anthropic.com"
+        ],
+        "http.request.header.accept-encoding": [
+            "gzip, deflate"
+        ],
+        "http.request.header.connection": [
+            "keep-alive"
+        ],
+        "http.request.header.x-stainless-timeout": [
+            "600"
+        ],
+        "http.request.header.accept": [
+            "application/json"
+        ],
+        "http.request.header.content-type": [
+            "application/json"
+        ],
+        "http.request.header.user-agent": [
+            "pydantic-ai/1.94.0"
+        ],
+        "http.request.header.x-stainless-lang": [
+            "python"
+        ],
+        "http.request.header.x-stainless-package-version": [
+            "0.101.0"
+        ],
+        "http.request.header.x-stainless-os": [
+            "MacOS"
+        ],
+        "http.request.header.x-stainless-arch": [
+            "arm64"
+        ],
+        "http.request.header.x-stainless-runtime": [
+            "CPython"
+        ],
+        "http.request.header.x-stainless-runtime-version": [
+            "3.12.11"
+        ],
+        "http.request.header.x-api-key": [
+            "[Scrubbed due to 'api-key']"
+        ],
+        "http.request.header.x-stainless-async": [
+            "async:asyncio"
+        ],
+        "http.request.header.anthropic-version": [
+            "2023-06-01"
+        ],
+        "http.request.header.x-stainless-retry-count": [
+            "0"
+        ],
+        "http.request.header.x-stainless-read-timeout": [
+            "600"
+        ],
+        "http.request.header.cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.request.header.content-length": [
+            "1994"
+        ],
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.request.body.text\":{\"type\":\"object\"}}}",
+        "http.request.body.text": "{\"max_tokens\":4096,\"messages\":[{\"role\":\"user\",\"content\":[{\"text\":\"Please refund order ORDER-1234 for $29.99 \u2014 the customer was charged twice for their pro_plan subscription.\",\"type\":\"text\"}]},{\"role\":\"assistant\",\"content\":[{\"id\":\"toolu_01NMq6tu5avTV6acWnpAwL5J\",\"type\":\"tool_use\",\"name\":\"refund_order\",\"input\":{\"order_id\":\"ORDER-1234\",\"amount_usd\":29.99,\"reason\":\"customer was charged twice for their pro_plan subscription\"}}]},{\"role\":\"user\",\"content\":[{\"tool_use_id\":\"toolu_01NMq6tu5avTV6acWnpAwL5J\",\"type\":\"tool_result\",\"content\":[{\"text\":\"Refunded 29.99 USD for order ORDER-1234 (reason: customer was charged twice for their pro_plan subscription). Reference: REFUND-DEMO-0001.\",\"type\":\"text\"}],\"is_error\":false}]}],\"model\":\"claude-haiku-4-5-20251001\",\"stream\":false,\"system\":[{\"type\":\"text\",\"text\":\"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\"}],\"tool_choice\":{\"type\":\"any\"},\"tools\":[{\"name\":\"refund_order\",\"description\":\"Issue a refund for an order. Requires human approval.\",\"input_schema\":{\"additionalProperties\":false,\"properties\":{\"order_id\":{\"type\":\"string\"},\"amount_usd\":{\"type\":\"number\"},\"reason\":{\"type\":\"string\"}},\"required\":[\"order_id\",\"amount_usd\",\"reason\"],\"type\":\"object\"}},{\"name\":\"final_result\",\"description\":\"The final response which ends this conversation\",\"input_schema\":{\"properties\":{\"text\":{\"maxLength\":4000,\"minLength\":1,\"type\":\"string\"},\"citations\":{\"items\":{\"$ref\":\"#/$defs/Citation\"},\"type\":\"array\"},\"confidence\":{\"default\":0.8,\"maximum\":1.0,\"minimum\":0.0,\"type\":\"number\"},\"risk_flag\":{\"default\":\"none\",\"enum\":[\"none\",\"escalate\",\"urgent\"],\"type\":\"string\"}},\"required\":[\"text\"],\"type\":\"object\",\"$defs\":{\"Citation\":{\"properties\":{\"doc_id\":{\"maxLength\":100,\"minLength\":1,\"type\":\"string\"},\"quote\":{\"default\":\"n/a\",\"maxLength\":500,\"minLength\":1,\"type\":\"string\"}},\"required\":[\"doc_id\"],\"type\":\"object\"}}}}]}",
+        "http.status_code": 200,
+        "http.response.header.date": [
+            "Tue, 19 May 2026 22:36:30 GMT"
+        ],
+        "http.response.header.content-type": [
+            "application/json"
+        ],
+        "http.response.header.transfer-encoding": [
+            "chunked"
+        ],
+        "http.response.header.connection": [
+            "keep-alive"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-remaining": [
+            "449000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-reset": [
+            "2026-05-19T22:36:29Z"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-reset": [
+            "2026-05-19T22:36:30Z"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-limit": [
+            "1000"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-remaining": [
+            "999"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-reset": [
+            "2026-05-19T22:36:29Z"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-limit": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-remaining": [
+            "539000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-reset": [
+            "2026-05-19T22:36:29Z"
+        ],
+        "http.response.header.request-id": [
+            "req_011CbCj84m5rSJGxDQQd588r"
+        ],
+        "http.response.header.strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+        ],
+        "http.response.header.anthropic-organization-id": [
+            "075b5bc4-de5b-4ca3-8669-199f41a4b995"
+        ],
+        "http.response.header.traceresponse": [
+            "00-04992cdbfb41900583a295230983496c-d53c210e68f56fa9-01"
+        ],
+        "http.response.header.server": [
+            "cloudflare"
+        ],
+        "http.response.header.x-envoy-upstream-service-time": [
+            "1059"
+        ],
+        "http.response.header.content-encoding": [
+            "gzip"
+        ],
+        "http.response.header.vary": [
+            "Accept-Encoding"
+        ],
+        "http.response.header.x-robots-tag": [
+            "none"
+        ],
+        "http.response.header.content-security-policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+        ],
+        "http.response.header.cf-cache-status": [
+            "DYNAMIC"
+        ],
+        "http.response.header.cf-ray": [
+            "9fe694aaaa1134c2-VIE"
+        ],
+        "http.target": "/v1/messages",
+        "logfire.scrubbed": "[{\"path\": [\"attributes\", \"http.request.header.x-api-key\"], \"matched_substring\": \"api-key\"}, {\"path\": [\"attributes\", \"http.request.header.cookie\"], \"matched_substring\": \"cookie\"}]"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "Reading response body",
+    "context": {
+        "trace_id": "0x019e426226863624195a93435255b0a6",
+        "span_id": "0xedee1ff6487b39c7",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x8674e0abcf546655",
+    "start_time": "2026-05-19T22:36:30.427172Z",
+    "end_time": "2026-05-19T22:36:30.428174Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "logfire.msg_template": "Reading response body",
+        "logfire.msg": "Reading response body",
+        "logfire.span_type": "span",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2685-7220-9b21-4d178944c525",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "http.response.body.text": "{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_015fsUkj7Xx7qne81cYRUToL\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_01D63QPf6SJSwEkDwZ7X2fFx\",\"name\":\"final_result\",\"input\":{\"text\":\"Refund processed successfully for order ORDER-1234. The customer has been refunded $29.99 for the duplicate charge on their pro_plan subscription. The refund reference number is REFUND-DEMO-0001.\",\"confidence\":0.95,\"citations\":[{\"doc_id\":\"REFUND-DEMO-0001\"}]},\"caller\":{\"type\":\"direct\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":1177,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":139,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.response.body.text\":{\"type\":\"object\"}}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "chat claude-haiku-4-5-20251001",
+    "context": {
+        "trace_id": "0x019e426226863624195a93435255b0a6",
+        "span_id": "0x6ee55758c0e6241d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xa977830478a1ff0e",
+    "start_time": "2026-05-19T22:36:29.193510Z",
+    "end_time": "2026-05-19T22:36:30.429730Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.provider.name": "anthropic",
+        "gen_ai.system": "anthropic",
+        "gen_ai.request.model": "claude-haiku-4-5-20251001",
+        "server.address": "api.anthropic.com",
+        "model_request_parameters": "{\"function_tools\": [{\"name\": \"refund_order\", \"parameters_json_schema\": {\"additionalProperties\": false, \"properties\": {\"order_id\": {\"type\": \"string\"}, \"amount_usd\": {\"type\": \"number\"}, \"reason\": {\"type\": \"string\"}}, \"required\": [\"order_id\", \"amount_usd\", \"reason\"], \"type\": \"object\"}, \"description\": \"Issue a refund for an order. Requires human approval.\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"unapproved\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"builtin_tools\": [], \"output_mode\": \"tool\", \"output_object\": null, \"output_tools\": [{\"name\": \"final_result\", \"parameters_json_schema\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}, \"description\": \"The final response which ends this conversation\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"output\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"prompted_output_template\": null, \"allow_text_output\": false, \"allow_image_output\": false, \"instruction_parts\": [{\"content\": \"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\", \"dynamic\": false, \"part_kind\": \"instruction\"}], \"thinking\": null}",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2685-7220-9b21-4d178944c525",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "gen_ai.tool.definitions": "[{\"type\": \"function\", \"name\": \"refund_order\", \"description\": \"Issue a refund for an order. Requires human approval.\", \"parameters\": {\"additionalProperties\": false, \"properties\": {\"order_id\": {\"type\": \"string\"}, \"amount_usd\": {\"type\": \"number\"}, \"reason\": {\"type\": \"string\"}}, \"required\": [\"order_id\", \"amount_usd\", \"reason\"], \"type\": \"object\"}}, {\"type\": \"function\", \"name\": \"final_result\", \"description\": \"The final response which ends this conversation\", \"parameters\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}}]",
+        "logfire.span_type": "span",
+        "logfire.msg": "chat claude-haiku-4-5-20251001",
+        "gen_ai.input.messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Please refund order ORDER-1234 for $29.99 \\u2014 the customer was charged twice for their pro_plan subscription.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"name\": \"refund_order\", \"arguments\": {\"order_id\": \"ORDER-1234\", \"amount_usd\": 29.99, \"reason\": \"customer was charged twice for their pro_plan subscription\"}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"name\": \"refund_order\", \"result\": \"Refunded 29.99 USD for order ORDER-1234 (reason: customer was charged twice for their pro_plan subscription). Reference: REFUND-DEMO-0001.\"}]}]",
+        "gen_ai.output.messages": "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01D63QPf6SJSwEkDwZ7X2fFx\", \"name\": \"final_result\", \"arguments\": {\"text\": \"Refund processed successfully for order ORDER-1234. The customer has been refunded $29.99 for the duplicate charge on their pro_plan subscription. The refund reference number is REFUND-DEMO-0001.\", \"confidence\": 0.95, \"citations\": [{\"doc_id\": \"REFUND-DEMO-0001\"}]}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"gen_ai.input.messages\": {\"type\": \"array\"}, \"gen_ai.output.messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"model_request_parameters\": {\"type\": \"object\"}}}",
+        "gen_ai.usage.input_tokens": 1177,
+        "gen_ai.usage.output_tokens": 139,
+        "gen_ai.usage.details.input_tokens": 1177,
+        "gen_ai.usage.details.output_tokens": 139,
+        "gen_ai.response.model": "claude-haiku-4-5-20251001",
+        "operation.cost": 0.001872,
+        "gen_ai.response.id": "msg_015fsUkj7Xx7qne81cYRUToL",
+        "gen_ai.response.finish_reasons": [
+            "tool_call"
+        ]
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "agent run",
+    "context": {
+        "trace_id": "0x019e426226863624195a93435255b0a6",
+        "span_id": "0xa977830478a1ff0e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-05-19T22:36:29.190460Z",
+    "end_time": "2026-05-19T22:36:30.431376Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "model_name": "claude-haiku-4-5-20251001",
+        "agent_name": "approval_agent",
+        "gen_ai.agent.name": "approval_agent",
+        "gen_ai.agent.call.id": "019e4262-2685-7220-9b21-4d178944c525",
+        "gen_ai.conversation.id": "019e4262-2257-72a0-895a-8ee30c755fcf",
+        "gen_ai.operation.name": "invoke_agent",
+        "logfire.msg": "approval_agent run",
+        "logfire.span_type": "span",
+        "final_result": "{\"text\": \"Refund processed successfully for order ORDER-1234. The customer has been refunded $29.99 for the duplicate charge on their pro_plan subscription. The refund reference number is REFUND-DEMO-0001.\", \"citations\": [{\"doc_id\": \"REFUND-DEMO-0001\", \"quote\": \"n/a\"}], \"confidence\": 0.95, \"risk_flag\": \"none\"}",
+        "gen_ai.usage.input_tokens": 1177,
+        "gen_ai.usage.output_tokens": 139,
+        "gen_ai.usage.details.input_tokens": 1177,
+        "gen_ai.usage.details.output_tokens": 139,
+        "pydantic_ai.all_messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Please refund order ORDER-1234 for $29.99 \\u2014 the customer was charged twice for their pro_plan subscription.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"name\": \"refund_order\", \"arguments\": {\"order_id\": \"ORDER-1234\", \"amount_usd\": 29.99, \"reason\": \"customer was charged twice for their pro_plan subscription\"}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_01NMq6tu5avTV6acWnpAwL5J\", \"name\": \"refund_order\", \"result\": \"Refunded 29.99 USD for order ORDER-1234 (reason: customer was charged twice for their pro_plan subscription). Reference: REFUND-DEMO-0001.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01D63QPf6SJSwEkDwZ7X2fFx\", \"name\": \"final_result\", \"arguments\": {\"text\": \"Refund processed successfully for order ORDER-1234. The customer has been refunded $29.99 for the duplicate charge on their pro_plan subscription. The refund reference number is REFUND-DEMO-0001.\", \"confidence\": 0.95, \"citations\": [{\"doc_id\": \"REFUND-DEMO-0001\"}]}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_01D63QPf6SJSwEkDwZ7X2fFx\", \"name\": \"final_result\", \"result\": \"Final result processed.\"}]}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a customer support assistant. When a customer asks for a refund, call the refund_order tool. After the refund completes, summarise the outcome in the Answer format with confidence and a citation.\"}]",
+        "pydantic_ai.new_message_index": 2,
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"pydantic_ai.all_messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"pydantic_ai.new_message_index\": {}, \"final_result\": {\"type\": \"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1177}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 139}], \"total\": 1316}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001872}], \"total\": 0.001872}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "fc0f198deb42462e917414e522687e22",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0xc4672f98eaa4efa8",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xe925873b96ad5aa5",
+    "start_time": "2026-05-20T06:07:22.534459Z",
+    "end_time": "2026-05-20T06:07:23.674329Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.anthropic.com/v1/messages?beta=true",
+        "logfire.span_type": "span",
+        "logfire.msg": "POST api.anthropic.com/v1/messages ? beta='true'",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e43fe-f39f-73fe-a2ff-c9987af20d49",
+        "gen_ai.conversation.id": "019e43fe-f39f-73fe-a2ff-c997d6113c4b",
+        "http.request.header.host": [
+            "api.anthropic.com"
+        ],
+        "http.request.header.accept-encoding": [
+            "gzip, deflate"
+        ],
+        "http.request.header.connection": [
+            "keep-alive"
+        ],
+        "http.request.header.x-stainless-timeout": [
+            "600"
+        ],
+        "http.request.header.accept": [
+            "application/json"
+        ],
+        "http.request.header.content-type": [
+            "application/json"
+        ],
+        "http.request.header.user-agent": [
+            "pydantic-ai/1.94.0"
+        ],
+        "http.request.header.x-stainless-lang": [
+            "python"
+        ],
+        "http.request.header.x-stainless-package-version": [
+            "0.101.0"
+        ],
+        "http.request.header.x-stainless-os": [
+            "MacOS"
+        ],
+        "http.request.header.x-stainless-arch": [
+            "arm64"
+        ],
+        "http.request.header.x-stainless-runtime": [
+            "CPython"
+        ],
+        "http.request.header.x-stainless-runtime-version": [
+            "3.12.11"
+        ],
+        "http.request.header.x-api-key": [
+            "[Scrubbed due to 'api-key']"
+        ],
+        "http.request.header.x-stainless-async": [
+            "async:asyncio"
+        ],
+        "http.request.header.anthropic-version": [
+            "2023-06-01"
+        ],
+        "http.request.header.x-stainless-retry-count": [
+            "0"
+        ],
+        "http.request.header.x-stainless-read-timeout": [
+            "600"
+        ],
+        "http.request.header.cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.request.header.content-length": [
+            "1444"
+        ],
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.request.body.text\":{\"type\":\"object\"}}}",
+        "http.request.body.text": "{\"max_tokens\":4096,\"messages\":[{\"role\":\"user\",\"content\":[{\"text\":\"What does the pro_plan cost?\",\"type\":\"text\"}]}],\"model\":\"claude-haiku-4-5-20251001\",\"stream\":false,\"system\":[{\"type\":\"text\",\"text\":\"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\"}],\"tool_choice\":{\"type\":\"any\"},\"tools\":[{\"name\":\"final_result\",\"description\":\"The final response which ends this conversation\",\"input_schema\":{\"properties\":{\"text\":{\"maxLength\":4000,\"minLength\":1,\"type\":\"string\"},\"citations\":{\"items\":{\"$ref\":\"#/$defs/Citation\"},\"type\":\"array\"},\"confidence\":{\"default\":0.8,\"maximum\":1.0,\"minimum\":0.0,\"type\":\"number\"},\"risk_flag\":{\"default\":\"none\",\"enum\":[\"none\",\"escalate\",\"urgent\"],\"type\":\"string\"}},\"required\":[\"text\"],\"type\":\"object\",\"$defs\":{\"Citation\":{\"properties\":{\"doc_id\":{\"maxLength\":100,\"minLength\":1,\"type\":\"string\"},\"quote\":{\"default\":\"n/a\",\"maxLength\":500,\"minLength\":1,\"type\":\"string\"}},\"required\":[\"doc_id\"],\"type\":\"object\"}}}}]}",
+        "http.status_code": 200,
+        "http.response.header.date": [
+            "Wed, 20 May 2026 06:07:23 GMT"
+        ],
+        "http.response.header.content-type": [
+            "application/json"
+        ],
+        "http.response.header.transfer-encoding": [
+            "chunked"
+        ],
+        "http.response.header.connection": [
+            "keep-alive"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-reset": [
+            "2026-05-20T06:07:23Z"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-reset": [
+            "2026-05-20T06:07:23Z"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-limit": [
+            "1000"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-remaining": [
+            "999"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-reset": [
+            "2026-05-20T06:07:22Z"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-limit": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-remaining": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-reset": [
+            "2026-05-20T06:07:23Z"
+        ],
+        "http.response.header.request-id": [
+            "req_011CbDKWHVsuz8ccN6KhvKJn"
+        ],
+        "http.response.header.strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+        ],
+        "http.response.header.anthropic-organization-id": [
+            "075b5bc4-de5b-4ca3-8669-199f41a4b995"
+        ],
+        "http.response.header.traceresponse": [
+            "00-afcfeec65a01045672361beb2b6e4d77-42a78d8802166853-01"
+        ],
+        "http.response.header.server": [
+            "cloudflare"
+        ],
+        "http.response.header.x-envoy-upstream-service-time": [
+            "895"
+        ],
+        "http.response.header.content-encoding": [
+            "gzip"
+        ],
+        "http.response.header.vary": [
+            "Accept-Encoding"
+        ],
+        "http.response.header.cf-cache-status": [
+            "DYNAMIC"
+        ],
+        "http.response.header.set-cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.response.header.content-security-policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+        ],
+        "http.response.header.x-robots-tag": [
+            "none"
+        ],
+        "http.response.header.cf-ray": [
+            "9fe929262c5068af-BUD"
+        ],
+        "http.target": "/v1/messages",
+        "logfire.scrubbed": "[{\"path\": [\"attributes\", \"http.request.header.x-api-key\"], \"matched_substring\": \"api-key\"}, {\"path\": [\"attributes\", \"http.request.header.cookie\"], \"matched_substring\": \"cookie\"}, {\"path\": [\"attributes\", \"http.response.header.set-cookie\"], \"matched_substring\": \"cookie\"}]"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "Reading response body",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0xdd9952b0baf2ba6e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xc4672f98eaa4efa8",
+    "start_time": "2026-05-20T06:07:23.677398Z",
+    "end_time": "2026-05-20T06:07:23.678442Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "logfire.msg_template": "Reading response body",
+        "logfire.msg": "Reading response body",
+        "logfire.span_type": "span",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e43fe-f39f-73fe-a2ff-c9987af20d49",
+        "gen_ai.conversation.id": "019e43fe-f39f-73fe-a2ff-c997d6113c4b",
+        "http.response.body.text": "{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_01He8wnTf48kLs9CjsZMBczV\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_016To8LJXo3deot3cEkcpvQA\",\"name\":\"final_result\",\"input\":{\"text\":\"The pro_plan costs $29.99 per month and includes access for up to 10 users.\",\"confidence\":0.95},\"caller\":{\"type\":\"direct\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":1008,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":78,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.response.body.text\":{\"type\":\"object\"}}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "chat claude-haiku-4-5-20251001",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0xe925873b96ad5aa5",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0x38a89e2d4ead5f70",
+    "start_time": "2026-05-20T06:07:22.530186Z",
+    "end_time": "2026-05-20T06:07:23.680587Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.provider.name": "anthropic",
+        "gen_ai.system": "anthropic",
+        "gen_ai.request.model": "claude-haiku-4-5-20251001",
+        "server.address": "api.anthropic.com",
+        "model_request_parameters": "{\"function_tools\": [], \"builtin_tools\": [], \"output_mode\": \"tool\", \"output_object\": null, \"output_tools\": [{\"name\": \"final_result\", \"parameters_json_schema\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}, \"description\": \"The final response which ends this conversation\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"output\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"prompted_output_template\": null, \"allow_text_output\": false, \"allow_image_output\": false, \"instruction_parts\": [{\"content\": \"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\", \"dynamic\": false, \"part_kind\": \"instruction\"}], \"thinking\": null}",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e43fe-f39f-73fe-a2ff-c9987af20d49",
+        "gen_ai.conversation.id": "019e43fe-f39f-73fe-a2ff-c997d6113c4b",
+        "gen_ai.tool.definitions": "[{\"type\": \"function\", \"name\": \"final_result\", \"description\": \"The final response which ends this conversation\", \"parameters\": {\"properties\": {\"text\": {\"maxLength\": 4000, \"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"$ref\": \"#/$defs/Citation\"}, \"type\": \"array\"}, \"confidence\": {\"default\": 0.8, \"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"risk_flag\": {\"default\": \"none\", \"enum\": [\"none\", \"escalate\", \"urgent\"], \"type\": \"string\"}}, \"required\": [\"text\"], \"type\": \"object\", \"$defs\": {\"Citation\": {\"properties\": {\"doc_id\": {\"maxLength\": 100, \"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"default\": \"n/a\", \"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"doc_id\"], \"type\": \"object\"}}}}]",
+        "logfire.span_type": "span",
+        "logfire.msg": "chat claude-haiku-4-5-20251001",
+        "gen_ai.input.messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What does the pro_plan cost?\"}]}]",
+        "gen_ai.output.messages": "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_016To8LJXo3deot3cEkcpvQA\", \"name\": \"final_result\", \"arguments\": {\"text\": \"The pro_plan costs $29.99 per month and includes access for up to 10 users.\", \"confidence\": 0.95}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"gen_ai.input.messages\": {\"type\": \"array\"}, \"gen_ai.output.messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"model_request_parameters\": {\"type\": \"object\"}}}",
+        "gen_ai.usage.input_tokens": 1008,
+        "gen_ai.usage.output_tokens": 78,
+        "gen_ai.usage.details.input_tokens": 1008,
+        "gen_ai.usage.details.output_tokens": 78,
+        "gen_ai.response.model": "claude-haiku-4-5-20251001",
+        "operation.cost": 0.001398,
+        "gen_ai.response.id": "msg_01He8wnTf48kLs9CjsZMBczV",
+        "gen_ai.response.finish_reasons": [
+            "tool_call"
+        ]
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "agent run",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x38a89e2d4ead5f70",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xe465c6909eb69381",
+    "start_time": "2026-05-20T06:07:22.528119Z",
+    "end_time": "2026-05-20T06:07:23.682485Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "model_name": "claude-haiku-4-5-20251001",
+        "agent_name": "eval-agent",
+        "gen_ai.agent.name": "eval-agent",
+        "gen_ai.agent.call.id": "019e43fe-f39f-73fe-a2ff-c9987af20d49",
+        "gen_ai.conversation.id": "019e43fe-f39f-73fe-a2ff-c997d6113c4b",
+        "gen_ai.operation.name": "invoke_agent",
+        "logfire.msg": "eval-agent run",
+        "logfire.span_type": "span",
+        "final_result": "{\"text\": \"The pro_plan costs $29.99 per month and includes access for up to 10 users.\", \"citations\": [], \"confidence\": 0.95, \"risk_flag\": \"none\"}",
+        "gen_ai.usage.input_tokens": 1008,
+        "gen_ai.usage.output_tokens": 78,
+        "gen_ai.usage.details.input_tokens": 1008,
+        "gen_ai.usage.details.output_tokens": 78,
+        "pydantic_ai.all_messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What does the pro_plan cost?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_016To8LJXo3deot3cEkcpvQA\", \"name\": \"final_result\", \"arguments\": {\"text\": \"The pro_plan costs $29.99 per month and includes access for up to 10 users.\", \"confidence\": 0.95}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_016To8LJXo3deot3cEkcpvQA\", \"name\": \"final_result\", \"result\": \"Final result processed.\"}]}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are a helpful customer support assistant. Always answer in the structured Answer format. If you are not sure, set confidence below 0.4 and say so. If the question is sensitive or out of scope, set risk_flag='escalate'. If the question concerns an urgent issue, set risk_flag='urgent'.\\n\\nKnown catalogue (USD/month):\\n- basic_plan $9.99 (1 user)\\n- pro_plan $29.99 (10 users)\\n- enterprise_plan $99.99 (unlimited)\\nStandard shipping: 3-5 business days, free on orders > $50.\\nReturns: 30 days from delivery.\\nCancellation: takes effect at end of billing period.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"pydantic_ai.all_messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"final_result\": {\"type\": \"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1008}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 78}], \"total\": 1086}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001398}], \"total\": 0.001398}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "execute {task}",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0xe465c6909eb69381",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x3b7e7d9abb6fc86e",
+    "start_time": "2026-05-20T06:07:22.526093Z",
+    "end_time": "2026-05-20T06:07:23.683088Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "task": "task",
+        "logfire.msg_template": "execute {task}",
+        "logfire.msg": "execute task",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"task\":{}}}",
+        "logfire.span_type": "span",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1008}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 78}], \"total\": 1086}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.001398}], \"total\": 0.001398}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluator: {evaluator_name}",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x19f6d3a51ee0c948",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x3b7e7d9abb6fc86e",
+    "start_time": "2026-05-20T06:07:23.684025Z",
+    "end_time": "2026-05-20T06:07:23.684204Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "evaluator_name": "keyword_overlap",
+        "logfire.msg_template": "Calling evaluator: {evaluator_name}",
+        "logfire.msg": "Calling evaluator: keyword_overlap",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"evaluator_name\":{}}}",
+        "logfire.span_type": "span"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluator: {evaluator_name}",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0xbc0b2be62b67435e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x3b7e7d9abb6fc86e",
+    "start_time": "2026-05-20T06:07:23.684381Z",
+    "end_time": "2026-05-20T06:07:23.684463Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "evaluator_name": "risk_flag",
+        "logfire.msg_template": "Calling evaluator: {evaluator_name}",
+        "logfire.msg": "Calling evaluator: risk_flag",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"evaluator_name\":{}}}",
+        "logfire.span_type": "span"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x61b7a75d251cacd7",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xa7d754940fb5af8e",
+    "start_time": "2026-05-20T06:07:23.691867Z",
+    "end_time": "2026-05-20T06:07:25.825012Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.anthropic.com/v1/messages?beta=true",
+        "logfire.span_type": "span",
+        "logfire.msg": "POST api.anthropic.com/v1/messages ? beta='true'",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e43fe-f826-7171-8138-e7bd25ade35b",
+        "gen_ai.conversation.id": "019e43fe-f826-7171-8138-e7bc3c2f1546",
+        "http.request.header.host": [
+            "api.anthropic.com"
+        ],
+        "http.request.header.accept-encoding": [
+            "gzip, deflate"
+        ],
+        "http.request.header.connection": [
+            "keep-alive"
+        ],
+        "http.request.header.x-stainless-timeout": [
+            "600"
+        ],
+        "http.request.header.accept": [
+            "application/json"
+        ],
+        "http.request.header.content-type": [
+            "application/json"
+        ],
+        "http.request.header.user-agent": [
+            "pydantic-ai/1.94.0"
+        ],
+        "http.request.header.x-stainless-lang": [
+            "python"
+        ],
+        "http.request.header.x-stainless-package-version": [
+            "0.101.0"
+        ],
+        "http.request.header.x-stainless-os": [
+            "MacOS"
+        ],
+        "http.request.header.x-stainless-arch": [
+            "arm64"
+        ],
+        "http.request.header.x-stainless-runtime": [
+            "CPython"
+        ],
+        "http.request.header.x-stainless-runtime-version": [
+            "3.12.11"
+        ],
+        "http.request.header.x-api-key": [
+            "[Scrubbed due to 'api-key']"
+        ],
+        "http.request.header.x-stainless-async": [
+            "async:asyncio"
+        ],
+        "http.request.header.anthropic-version": [
+            "2023-06-01"
+        ],
+        "http.request.header.x-stainless-retry-count": [
+            "0"
+        ],
+        "http.request.header.x-stainless-read-timeout": [
+            "600"
+        ],
+        "http.request.header.cookie": [
+            "[Scrubbed due to 'cookie']"
+        ],
+        "http.request.header.content-length": [
+            "1115"
+        ],
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.request.body.text\":{\"type\":\"object\"}}}",
+        "http.request.body.text": "{\"max_tokens\":4096,\"messages\":[{\"role\":\"user\",\"content\":[{\"text\":\"Question:\\nWhat does the pro_plan cost?\\n\\nReference answer:\\nThe pro_plan is $29.99/month, supporting up to 10 users.\\n\\nCandidate answer:\\nThe pro_plan costs $29.99 per month and includes access for up to 10 users.\\n\\nScore the candidate's match to the reference.\",\"type\":\"text\"}]}],\"model\":\"claude-haiku-4-5-20251001\",\"stream\":false,\"system\":[{\"type\":\"text\",\"text\":\"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\"}],\"tool_choice\":{\"type\":\"any\"},\"tools\":[{\"name\":\"final_result\",\"description\":\"Schema the judge agent must return \u2014 keeps the score structurally validated.\",\"input_schema\":{\"properties\":{\"score\":{\"maximum\":1.0,\"minimum\":0.0,\"type\":\"number\"},\"reasoning\":{\"maxLength\":500,\"minLength\":1,\"type\":\"string\"}},\"required\":[\"score\",\"reasoning\"],\"type\":\"object\"}}]}",
+        "http.status_code": 200,
+        "http.response.header.date": [
+            "Wed, 20 May 2026 06:07:25 GMT"
+        ],
+        "http.response.header.content-type": [
+            "application/json"
+        ],
+        "http.response.header.transfer-encoding": [
+            "chunked"
+        ],
+        "http.response.header.connection": [
+            "keep-alive"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-limit": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-remaining": [
+            "450000"
+        ],
+        "http.response.header.anthropic-ratelimit-input-tokens-reset": [
+            "2026-05-20T06:07:24Z"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-limit": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-remaining": [
+            "90000"
+        ],
+        "http.response.header.anthropic-ratelimit-output-tokens-reset": [
+            "2026-05-20T06:07:25Z"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-limit": [
+            "1000"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-remaining": [
+            "999"
+        ],
+        "http.response.header.anthropic-ratelimit-requests-reset": [
+            "2026-05-20T06:07:24Z"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-limit": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-remaining": [
+            "540000"
+        ],
+        "http.response.header.anthropic-ratelimit-tokens-reset": [
+            "2026-05-20T06:07:24Z"
+        ],
+        "http.response.header.request-id": [
+            "req_011CbDKWNMaPjMoy6uwro4Lb"
+        ],
+        "http.response.header.strict-transport-security": [
+            "max-age=31536000; includeSubDomains; preload"
+        ],
+        "http.response.header.anthropic-organization-id": [
+            "075b5bc4-de5b-4ca3-8669-199f41a4b995"
+        ],
+        "http.response.header.traceresponse": [
+            "00-5da029165969ac63a953db7b427bb2ad-375737b47e0d7137-01"
+        ],
+        "http.response.header.server": [
+            "cloudflare"
+        ],
+        "http.response.header.x-envoy-upstream-service-time": [
+            "1860"
+        ],
+        "http.response.header.content-encoding": [
+            "gzip"
+        ],
+        "http.response.header.vary": [
+            "Accept-Encoding"
+        ],
+        "http.response.header.cf-cache-status": [
+            "DYNAMIC"
+        ],
+        "http.response.header.x-robots-tag": [
+            "none"
+        ],
+        "http.response.header.content-security-policy": [
+            "default-src 'none'; frame-ancestors 'none'"
+        ],
+        "http.response.header.cf-ray": [
+            "9fe9292d48ee68af-BUD"
+        ],
+        "http.target": "/v1/messages",
+        "logfire.scrubbed": "[{\"path\": [\"attributes\", \"http.request.header.x-api-key\"], \"matched_substring\": \"api-key\"}, {\"path\": [\"attributes\", \"http.request.header.cookie\"], \"matched_substring\": \"cookie\"}]"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "Reading response body",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x5b6cdff919111328",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x61b7a75d251cacd7",
+    "start_time": "2026-05-20T06:07:25.828203Z",
+    "end_time": "2026-05-20T06:07:25.829346Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "logfire.msg_template": "Reading response body",
+        "logfire.msg": "Reading response body",
+        "logfire.span_type": "span",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e43fe-f826-7171-8138-e7bd25ade35b",
+        "gen_ai.conversation.id": "019e43fe-f826-7171-8138-e7bc3c2f1546",
+        "http.response.body.text": "{\"model\":\"claude-haiku-4-5-20251001\",\"id\":\"msg_01U75xSraqiV8gKssWydjCKy\",\"type\":\"message\",\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_01B96EQjugGfZUhEYePW7TqC\",\"name\":\"final_result\",\"input\":{\"score\":1.0,\"reasoning\":\"The candidate answer captures all key facts from the reference answer: the exact price ($29.99/month) and the user limit (up to 10 users). The wording is slightly different but conveys identical information. No hallucinations or inaccuracies are present.\"},\"caller\":{\"type\":\"direct\"}}],\"stop_reason\":\"tool_use\",\"stop_sequence\":null,\"stop_details\":null,\"usage\":{\"input_tokens\":870,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"output_tokens\":114,\"service_tier\":\"standard\",\"inference_geo\":\"not_available\"}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"http.response.body.text\":{\"type\":\"object\"}}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "chat claude-haiku-4-5-20251001",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0xa7d754940fb5af8e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0x1e671407f4ab3e2d",
+    "start_time": "2026-05-20T06:07:23.689417Z",
+    "end_time": "2026-05-20T06:07:25.830868Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.provider.name": "anthropic",
+        "gen_ai.system": "anthropic",
+        "gen_ai.request.model": "claude-haiku-4-5-20251001",
+        "server.address": "api.anthropic.com",
+        "model_request_parameters": "{\"function_tools\": [], \"builtin_tools\": [], \"output_mode\": \"tool\", \"output_object\": null, \"output_tools\": [{\"name\": \"final_result\", \"parameters_json_schema\": {\"properties\": {\"score\": {\"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"reasoning\": {\"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"score\", \"reasoning\"], \"type\": \"object\"}, \"description\": \"Schema the judge agent must return \\u2014 keeps the score structurally validated.\", \"outer_typed_dict_key\": null, \"strict\": false, \"sequential\": false, \"kind\": \"output\", \"metadata\": null, \"timeout\": null, \"defer_loading\": false, \"prefer_builtin\": null, \"return_schema\": null, \"include_return_schema\": null}], \"prompted_output_template\": null, \"allow_text_output\": false, \"allow_image_output\": false, \"instruction_parts\": [{\"content\": \"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\", \"dynamic\": false, \"part_kind\": \"instruction\"}], \"thinking\": null}",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e43fe-f826-7171-8138-e7bd25ade35b",
+        "gen_ai.conversation.id": "019e43fe-f826-7171-8138-e7bc3c2f1546",
+        "gen_ai.tool.definitions": "[{\"type\": \"function\", \"name\": \"final_result\", \"description\": \"Schema the judge agent must return \\u2014 keeps the score structurally validated.\", \"parameters\": {\"properties\": {\"score\": {\"maximum\": 1.0, \"minimum\": 0.0, \"type\": \"number\"}, \"reasoning\": {\"maxLength\": 500, \"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"score\", \"reasoning\"], \"type\": \"object\"}}]",
+        "logfire.span_type": "span",
+        "logfire.msg": "chat claude-haiku-4-5-20251001",
+        "gen_ai.input.messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Question:\\nWhat does the pro_plan cost?\\n\\nReference answer:\\nThe pro_plan is $29.99/month, supporting up to 10 users.\\n\\nCandidate answer:\\nThe pro_plan costs $29.99 per month and includes access for up to 10 users.\\n\\nScore the candidate's match to the reference.\"}]}]",
+        "gen_ai.output.messages": "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01B96EQjugGfZUhEYePW7TqC\", \"name\": \"final_result\", \"arguments\": {\"score\": 1.0, \"reasoning\": \"The candidate answer captures all key facts from the reference answer: the exact price ($29.99/month) and the user limit (up to 10 users). The wording is slightly different but conveys identical information. No hallucinations or inaccuracies are present.\"}}], \"finish_reason\": \"tool_call\"}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"gen_ai.input.messages\": {\"type\": \"array\"}, \"gen_ai.output.messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"model_request_parameters\": {\"type\": \"object\"}}}",
+        "gen_ai.usage.input_tokens": 870,
+        "gen_ai.usage.output_tokens": 114,
+        "gen_ai.usage.details.input_tokens": 870,
+        "gen_ai.usage.details.output_tokens": 114,
+        "gen_ai.response.model": "claude-haiku-4-5-20251001",
+        "operation.cost": 0.00144,
+        "gen_ai.response.id": "msg_01U75xSraqiV8gKssWydjCKy",
+        "gen_ai.response.finish_reasons": [
+            "tool_call"
+        ]
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "agent run",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x1e671407f4ab3e2d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x4d03b1ec39eb1ff6",
+    "start_time": "2026-05-20T06:07:23.686980Z",
+    "end_time": "2026-05-20T06:07:25.832590Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "model_name": "claude-haiku-4-5-20251001",
+        "agent_name": "_JUDGE_AGENT",
+        "gen_ai.agent.name": "_JUDGE_AGENT",
+        "gen_ai.agent.call.id": "019e43fe-f826-7171-8138-e7bd25ade35b",
+        "gen_ai.conversation.id": "019e43fe-f826-7171-8138-e7bc3c2f1546",
+        "gen_ai.operation.name": "invoke_agent",
+        "logfire.msg": "_JUDGE_AGENT run",
+        "logfire.span_type": "span",
+        "final_result": "{\"score\": 1.0, \"reasoning\": \"The candidate answer captures all key facts from the reference answer: the exact price ($29.99/month) and the user limit (up to 10 users). The wording is slightly different but conveys identical information. No hallucinations or inaccuracies are present.\"}",
+        "gen_ai.usage.input_tokens": 870,
+        "gen_ai.usage.output_tokens": 114,
+        "gen_ai.usage.details.input_tokens": 870,
+        "gen_ai.usage.details.output_tokens": 114,
+        "pydantic_ai.all_messages": "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Question:\\nWhat does the pro_plan cost?\\n\\nReference answer:\\nThe pro_plan is $29.99/month, supporting up to 10 users.\\n\\nCandidate answer:\\nThe pro_plan costs $29.99 per month and includes access for up to 10 users.\\n\\nScore the candidate's match to the reference.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"toolu_01B96EQjugGfZUhEYePW7TqC\", \"name\": \"final_result\", \"arguments\": {\"score\": 1.0, \"reasoning\": \"The candidate answer captures all key facts from the reference answer: the exact price ($29.99/month) and the user limit (up to 10 users). The wording is slightly different but conveys identical information. No hallucinations or inaccuracies are present.\"}}], \"finish_reason\": \"tool_call\"}, {\"role\": \"user\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"toolu_01B96EQjugGfZUhEYePW7TqC\", \"name\": \"final_result\", \"result\": \"Final result processed.\"}]}]",
+        "gen_ai.system_instructions": "[{\"type\": \"text\", \"content\": \"You are an evaluation judge. Given a question, a reference answer, and a candidate answer, return {score: float, reasoning: str} where `score` is between 0.0 and 1.0. 1.0 means the candidate captures the reference answer's key facts; 0.0 means it's wrong or unrelated. Penalise hallucinated specifics. Be strict on numbers.\"}]",
+        "logfire.json_schema": "{\"type\": \"object\", \"properties\": {\"pydantic_ai.all_messages\": {\"type\": \"array\"}, \"gen_ai.system_instructions\": {\"type\": \"array\"}, \"final_result\": {\"type\": \"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 870}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 114}], \"total\": 984}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.00144}], \"total\": 0.00144}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluator: {evaluator_name}",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x4d03b1ec39eb1ff6",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x3b7e7d9abb6fc86e",
+    "start_time": "2026-05-20T06:07:23.684583Z",
+    "end_time": "2026-05-20T06:07:25.833194Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "evaluator_name": "llm_judge",
+        "logfire.msg_template": "Calling evaluator: {evaluator_name}",
+        "logfire.msg": "Calling evaluator: llm_judge",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"evaluator_name\":{}}}",
+        "logfire.span_type": "span",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 870}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 114}], \"total\": 984}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.00144}], \"total\": 0.00144}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "case: {case_name}",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x3b7e7d9abb6fc86e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x1c58d63654b88c8e",
+    "start_time": "2026-05-20T06:07:22.525849Z",
+    "end_time": "2026-05-20T06:07:25.834037Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "task_name": "task",
+        "case_name": "qa-01-price",
+        "inputs": "What does the pro_plan cost?",
+        "metadata": "{\"expected_keywords\":[\"29.99\",\"pro_plan\"],\"must_escalate\":false,\"expected_answer\":\"The pro_plan is $29.99/month, supporting up to 10 users.\"}",
+        "expected_output": "null",
+        "logfire.msg_template": "case: {case_name}",
+        "logfire.msg": "case: qa-01-price",
+        "logfire.span_type": "span",
+        "output": "{\"text\":\"The pro_plan costs $29.99 per month and includes access for up to 10 users.\",\"citations\":[],\"confidence\":0.95,\"risk_flag\":\"none\"}",
+        "task_duration": 1.156995,
+        "metrics": "{\"requests\":1,\"input_tokens\":2016,\"output_tokens\":156,\"cost\":0.001398}",
+        "attributes": "{}",
+        "assertions": "{}",
+        "scores": "{\"keyword_overlap\":{\"name\":\"keyword_overlap\",\"value\":1.0,\"reason\":null,\"source\":{\"name\":\"KeywordOverlapEvaluator\",\"arguments\":null},\"evaluator_version\":null},\"risk_flag\":{\"name\":\"risk_flag\",\"value\":1.0,\"reason\":null,\"source\":{\"name\":\"RiskFlagEvaluator\",\"arguments\":null},\"evaluator_version\":null},\"llm_judge\":{\"name\":\"llm_judge\",\"value\":1.0,\"reason\":null,\"source\":{\"name\":\"LLMJudgeEvaluator\",\"arguments\":null},\"evaluator_version\":null}}",
+        "labels": "{}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"task_name\":{},\"case_name\":{},\"inputs\":{},\"metadata\":{\"type\":\"object\"},\"expected_output\":{\"type\":\"null\"},\"output\":{\"type\":\"object\",\"title\":\"Answer\",\"x-python-datatype\":\"PydanticModel\"},\"task_duration\":{},\"metrics\":{\"type\":\"object\"},\"attributes\":{\"type\":\"object\"},\"assertions\":{\"type\":\"object\"},\"scores\":{\"type\":\"object\"},\"labels\":{\"type\":\"object\"}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1878}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 192}], \"total\": 2070}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.0028380000000000002}], \"total\": 0.0028380000000000002}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "evaluate {name}",
+    "context": {
+        "trace_id": "0x019e43fef399a30792c01c2933ed6e0f",
+        "span_id": "0x1c58d63654b88c8e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-05-20T06:07:22.521728Z",
+    "end_time": "2026-05-20T06:07:25.836527Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "code.filepath": "/var/folders/2h/0rn53sk962v5pdjbjs_4mplm0000gn/T/ipykernel_19369/2836299414.py",
+        "code.lineno": 24,
+        "name": "task",
+        "task_name": "task",
+        "dataset_name": "04_production-evals",
+        "n_cases": 1,
+        "gen_ai.operation.name": "experiment",
+        "logfire.msg_template": "evaluate {name}",
+        "logfire.msg": "evaluate task",
+        "logfire.span_type": "span",
+        "logfire.experiment.metadata": "{\"n_cases\":1,\"averages\":{\"name\":\"Averages\",\"scores\":{\"keyword_overlap\":1.0,\"risk_flag\":1.0,\"llm_judge\":1.0},\"labels\":{},\"metrics\":{\"requests\":1.0,\"input_tokens\":2016.0,\"output_tokens\":156.0,\"cost\":0.001398},\"assertions\":null,\"task_duration\":1.156995,\"total_duration\":3.308188}}",
+        "logfire.json_schema": "{\"type\":\"object\",\"properties\":{\"name\":{},\"task_name\":{},\"dataset_name\":{},\"n_cases\":{},\"gen_ai.operation.name\":{},\"logfire.experiment.metadata\":{\"type\":\"object\",\"properties\":{\"averages\":{\"type\":\"object\",\"title\":\"ReportCaseAggregate\",\"x-python-datatype\":\"PydanticModel\"}}}}}",
+        "logfire.metrics": "{\"gen_ai.client.token.usage\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"input\"}, \"total\": 1878}, {\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\", \"gen_ai.token.type\": \"output\"}, \"total\": 192}], \"total\": 2070}, \"operation.cost\": {\"details\": [{\"attributes\": {\"gen_ai.operation.name\": \"chat\", \"gen_ai.provider.name\": \"anthropic\", \"gen_ai.request.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.response.model\": \"claude-haiku-4-5-20251001\", \"gen_ai.system\": \"anthropic\"}, \"total\": 0.0028380000000000002}], \"total\": 0.0028380000000000002}}"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.instance.id": "ea425b7e796b4f41abf89de3f249cebb",
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.40.0",
+            "service.name": "support-assistant",
+            "process.pid": 19369,
+            "process.runtime.name": "cpython",
+            "process.runtime.version": "3.12.11",
+            "process.runtime.description": "3.12.11 (main, Sep 18 2025, 19:41:45) [Clang 20.1.4 ]",
+            "service.version": "28f95d5e9783ceb00e030fd800fa1aab49d6e3fa"
+        },
+        "schema_url": ""
+    }
+}
